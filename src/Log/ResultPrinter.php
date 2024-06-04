@@ -59,7 +59,7 @@ class ResultPrinter implements LoggerAwareInterface, ProgressIndicatorAwareInter
     public function printStopOnFail($result)
     {
         $this->printMessage(LogLevel::NOTICE, 'Stopping on fail. Exiting....');
-        $this->printMessage(LogLevel::ERROR, 'Exit Code: {code}, Message: {message}', ['code' => $result->getExitCode(), 'message' => $result->getOutputData()]);
+        $this->printMessage(LogLevel::ERROR, 'Exit Code: {code}', ['code' => $result->getExitCode()]);
     }
 
     /**
